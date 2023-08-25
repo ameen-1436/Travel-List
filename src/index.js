@@ -1,10 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-//import "./index.css";
+import "./index.css";
 //import "./flashCard.css";
-import App from "./Components/App";
+import App from "./components/App";
 //import FlashCard from "./Components/FlashCard";
-import "./accordian.css";
+//import "./accordion.css";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>

@@ -3,7 +3,7 @@ import Logo from "./Logo";
 import Form from "./Form";
 import PackingList from "./PackingList";
 import Stats from "./Stats";
-import Accordian from './accordian';
+import Accordian from "./Accordion";
 
 export default function App() {
   const [items, setItems] = useState([]);
@@ -34,7 +34,7 @@ export default function App() {
 
   return (
     <div>
-      {/* <Logo />
+      <Logo />
       <Form onAddItems={handleAddItems} />
       <PackingList
         items={items}
@@ -42,8 +42,8 @@ export default function App() {
         onToggleItem={handleToggleItem}
         onClearList={handleClearItemsList}
       />
-      <Stats items={items} /> */}
-      <Accordian />
+      <Stats items={items} />
+      {/* <Accordian /> */}
     </div>
   );
 }

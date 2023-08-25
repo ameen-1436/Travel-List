@@ -1,4 +1,4 @@
-import "../accordian.css";
+import "../accordion.css";
 import { useState } from "react";
 
 const faqs = [
@@ -15,13 +15,13 @@ const faqs = [
     text: "Excepturi velit laborum, perspiciatis nemo perferendis reiciendis aliquam possimus dolor sed! Dolore laborum ducimus veritatis facere molestias!",
   },
 ];
-export default function Accordian() {
+export default function Accordion() {
   const [curOpen, setCurOpen] = useState(null);
 
   return (
     <div className="accordion">
       {faqs.map((item, i) => (
-        <AccordianItem
+        <AccordionItem
           question={item.title}
           num={i}
           key={item.title}
@@ -29,16 +29,15 @@ export default function Accordian() {
           curOpen={curOpen}
           onOpen={setCurOpen}
         />
-
       ))}
     </div>
   );
 }
-const AccordianItem = ({ question, num, text, curOpen, onOpen }) => {
+const AccordionItem = ({ question, num, text, curOpen, onOpen }) => {
   const isOpen = num === curOpen;
 
   const handleToggle = () => {
-    return onOpen(isOpen? null: num);
+    return onOpen(isOpen ? null : num);
   };
   return (
     <div className={`item ${isOpen ? "open" : ""}`} onClick={handleToggle}>
